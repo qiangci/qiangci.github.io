@@ -5,19 +5,19 @@
   
 
   
-  <title>js中call、bind、apply方法的异同 | Hexo</title>
+  <title>v-if、v-else-if、v-else、v-show | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="三者都可以改变this的指向1234567const person &#x3D; &amp;#123; name: &#39;Lydia&#39;&amp;#125;;function sayHi(age) &amp;#123;    console.log(this.name + &#39; is &#39; + age);&amp;#125;sayHi(21);  &#x2F;&#x2F;  is 21  此时this指向全局对象  call call方法将this指向改变为perso">
+  <meta name="description" content="v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 display 属性v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级display:none：隐藏该元素并且">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js中call、bind、apply方法的异同">
-<meta property="og:url" content="https://qiangci.github.io/2020/05/20/js%E4%B8%ADcall%E3%80%81bind%E3%80%81apply%E6%96%B9%E6%B3%95%E7%9A%84%E5%BC%82%E5%90%8C/index.html">
+<meta property="og:title" content="v-if、v-else-if、v-else、v-show">
+<meta property="og:url" content="https://qiangci.github.io/2020/08/20/vue-v-if-v-show/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="三者都可以改变this的指向1234567const person &#x3D; &amp;#123; name: &#39;Lydia&#39;&amp;#125;;function sayHi(age) &amp;#123;    console.log(this.name + &#39; is &#39; + age);&amp;#125;sayHi(21);  &#x2F;&#x2F;  is 21  此时this指向全局对象  call call方法将this指向改变为perso">
+<meta property="og:description" content="v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 display 属性v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级display:none：隐藏该元素并且">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-20T12:54:18.000Z">
-<meta property="article:modified_time" content="2020-05-20T13:31:36.027Z">
+<meta property="article:published_time" content="2020-08-20T12:45:13.000Z">
+<meta property="article:modified_time" content="2020-08-20T13:11:40.384Z">
 <meta property="article:author" content="张露萍">
-<meta property="article:tag" content="js基础">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
   
   
@@ -69,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-js中call、bind、apply方法的异同" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vue-v-if-v-show" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/20/js%E4%B8%ADcall%E3%80%81bind%E3%80%81apply%E6%96%B9%E6%B3%95%E7%9A%84%E5%BC%82%E5%90%8C/" class="article-date">
-  <time datetime="2020-05-20T12:54:18.000Z" itemprop="datePublished">2020-05-20</time>
+    <a href="/2020/08/20/vue-v-if-v-show/" class="article-date">
+  <time datetime="2020-08-20T12:45:13.000Z" itemprop="datePublished">2020-08-20</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js中call、bind、apply方法的异同
+      v-if、v-else-if、v-else、v-show
     </h1>
   
 
@@ -91,30 +91,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="三者都可以改变this的指向"><a href="#三者都可以改变this的指向" class="headerlink" title="三者都可以改变this的指向"></a>三者都可以改变this的指向</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const person = &#123; name: <span class="string">'Lydia'</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> sayHi(age) &#123;</span><br><span class="line">    console.log(this.name + <span class="string">' is '</span> + age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sayHi(21);  //  is 21  此时this指向全局对象</span><br></pre></td></tr></table></figure>
-
-<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><ul>
-<li>call方法将this指向改变为person对象</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sayHi.call(person, 21); // Lydia is 21</span><br></pre></td></tr></table></figure>
-
-<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2><ul>
-<li>bind方法将this指向改变为person对象，bind返回函数的拷贝值，需要执行</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sayHi.bind(person, 21)(); // Lydia is 21</span><br></pre></td></tr></table></figure>
-
-<h2 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h2><ul>
-<li>apply方法将this指向改变为person对象，(object: 代替function中this对象, args: 数组参数)</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sayHi.apply(person, [21]);  // Lydia is 21</span><br></pre></td></tr></table></figure>
-
+        <h3 id="v-if-指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回-truthy-值的时候被渲染"><a href="#v-if-指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回-truthy-值的时候被渲染" class="headerlink" title="v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染"></a>v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染</h3><h3 id="v-show-的元素始终会被渲染并保留在-DOM-中。v-show-只是简单地切换元素的-display-属性"><a href="#v-show-的元素始终会被渲染并保留在-DOM-中。v-show-只是简单地切换元素的-display-属性" class="headerlink" title="v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 display 属性"></a>v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 display 属性</h3><h3 id="v-if-有更高的切换开销，而-v-show-有更高的初始渲染开销"><a href="#v-if-有更高的切换开销，而-v-show-有更高的初始渲染开销" class="headerlink" title="v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销"></a>v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销</h3><h3 id="当-v-if-与-v-for-一起使用时，v-for-具有比-v-if-更高的优先级"><a href="#当-v-if-与-v-for-一起使用时，v-for-具有比-v-if-更高的优先级" class="headerlink" title="当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级"></a>当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级</h3><h3 id="display-none：隐藏该元素并且消除该元素所占的空间"><a href="#display-none：隐藏该元素并且消除该元素所占的空间" class="headerlink" title="display:none：隐藏该元素并且消除该元素所占的空间"></a>display:none：隐藏该元素并且消除该元素所占的空间</h3><h3 id="visibility-hidden-：隐藏该元素但是该元素所占的内存空间还存在"><a href="#visibility-hidden-：隐藏该元素但是该元素所占的内存空间还存在" class="headerlink" title="visibility:hidden ：隐藏该元素但是该元素所占的内存空间还存在"></a>visibility:hidden ：隐藏该元素但是该元素所占的内存空间还存在</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://qiangci.github.io/2020/05/20/js%E4%B8%ADcall%E3%80%81bind%E3%80%81apply%E6%96%B9%E6%B3%95%E7%9A%84%E5%BC%82%E5%90%8C/" data-id="ckafdq5dq0000a0vy13vx8r18" class="article-share-link">Share</a>
+      <a data-url="https://qiangci.github.io/2020/08/20/vue-v-if-v-show/" data-id="cke2sw0930000ukvyezoy5qx9" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js%E5%9F%BA%E7%A1%80/" rel="tag">js基础</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
 
     </footer>
   </div>
@@ -122,19 +106,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/05/20/Daily-English-2020-05-20/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Daily English 2020-05-20
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/05/21/%E9%97%AD%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">闭包 (closure)</div>
     </a>
   
 </nav>

@@ -48,6 +48,8 @@
         
           <a class="main-nav-link" href="/">js</a>
         
+          <a class="main-nav-link" href="/">vue</a>
+        
           <a class="main-nav-link" href="/">其他</a>
         
       </nav>
@@ -63,6 +65,128 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-vue-v-if-v-show" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/20/vue-v-if-v-show/" class="article-date">
+  <time datetime="2020-08-20T12:45:13.000Z" itemprop="datePublished">2020-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/20/vue-v-if-v-show/">v-if、v-else-if、v-else、v-show</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="v-if-指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回-truthy-值的时候被渲染"><a href="#v-if-指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回-truthy-值的时候被渲染" class="headerlink" title="v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染"></a>v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染</h3><h3 id="v-show-的元素始终会被渲染并保留在-DOM-中。v-show-只是简单地切换元素的-display-属性"><a href="#v-show-的元素始终会被渲染并保留在-DOM-中。v-show-只是简单地切换元素的-display-属性" class="headerlink" title="v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 display 属性"></a>v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 display 属性</h3><h3 id="v-if-有更高的切换开销，而-v-show-有更高的初始渲染开销"><a href="#v-if-有更高的切换开销，而-v-show-有更高的初始渲染开销" class="headerlink" title="v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销"></a>v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销</h3><h3 id="当-v-if-与-v-for-一起使用时，v-for-具有比-v-if-更高的优先级"><a href="#当-v-if-与-v-for-一起使用时，v-for-具有比-v-if-更高的优先级" class="headerlink" title="当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级"></a>当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级</h3><h3 id="display-none：隐藏该元素并且消除该元素所占的空间"><a href="#display-none：隐藏该元素并且消除该元素所占的空间" class="headerlink" title="display:none：隐藏该元素并且消除该元素所占的空间"></a>display:none：隐藏该元素并且消除该元素所占的空间</h3><h3 id="visibility-hidden-：隐藏该元素但是该元素所占的内存空间还存在"><a href="#visibility-hidden-：隐藏该元素但是该元素所占的内存空间还存在" class="headerlink" title="visibility:hidden ：隐藏该元素但是该元素所占的内存空间还存在"></a>visibility:hidden ：隐藏该元素但是该元素所占的内存空间还存在</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://qiangci.github.io/2020/08/20/vue-v-if-v-show/" data-id="cke2sw0930000ukvyezoy5qx9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-闭包" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/21/%E9%97%AD%E5%8C%85/" class="article-date">
+  <time datetime="2020-05-21T13:34:12.000Z" itemprop="datePublished">2020-05-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/21/%E9%97%AD%E5%8C%85/">闭包 (closure)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h2><h3 id="闭包实际上是一种函数，当嵌套的内部函数引用了嵌套的外部函数的变量（函数），就形成了闭包"><a href="#闭包实际上是一种函数，当嵌套的内部函数引用了嵌套的外部函数的变量（函数），就形成了闭包" class="headerlink" title="闭包实际上是一种函数，当嵌套的内部函数引用了嵌套的外部函数的变量（函数），就形成了闭包"></a>闭包实际上是一种函数，当嵌套的内部函数引用了嵌套的外部函数的变量（函数），就形成了闭包</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://qiangci.github.io/2020/05/21/%E9%97%AD%E5%8C%85/" data-id="cke2sw09e0003ukvy0oh39ai9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js%E5%9F%BA%E7%A1%80/" rel="tag">js基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Daily-English-2020-05-21" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/21/Daily-English-2020-05-21/" class="article-date">
+  <time datetime="2020-05-21T13:11:08.000Z" itemprop="datePublished">2020-05-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/21/Daily-English-2020-05-21/">Daily English 2020-05-21</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Born <span class="keyword">in</span> the crisis of the old regime and Iberian Colonialism, many of the</span><br><span class="line">leaders of independence shared the ideals of representative government.</span><br></pre></td></tr></table></figure>
+
+<h3 id="【译文】许多争取独立的领导人都出生于旧式政体和伊比利亚殖民主义危机时期，他们都抱有代议制政府的理想。"><a href="#【译文】许多争取独立的领导人都出生于旧式政体和伊比利亚殖民主义危机时期，他们都抱有代议制政府的理想。" class="headerlink" title="【译文】许多争取独立的领导人都出生于旧式政体和伊比利亚殖民主义危机时期，他们都抱有代议制政府的理想。"></a>【译文】许多争取独立的领导人都出生于旧式政体和伊比利亚殖民主义危机时期，他们都抱有代议制政府的理想。</h3><ul>
+<li><p>句子主干是 leaders shared the ideals</p>
+</li>
+<li><p>crisis 危机；regime 政体；Iberian Colonialism 伊比利亚殖民主义；independence 独立；representative 代表</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://qiangci.github.io/2020/05/21/Daily-English-2020-05-21/" data-id="ckagt0phg0000c4vycyc63m66" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/English/" rel="tag">English</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Daily-English-2020-05-20" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -86,7 +210,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Having been isolated on a remote island, with little work to occupy them, </span><br><span class="line">the soliders suffered from boredom and low spirits.</span><br></pre></td></tr></table></figure>
+        <h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Having been isolated on a remote island, with little work to occupy them,</span><br><span class="line">the soliders suffered from boredom and low spirits.</span><br></pre></td></tr></table></figure>
 
 <h3 id="【译文】那些士兵身处在一个偏远的岛上，与世隔绝又无事可做，因此闲的无聊，情绪低落"><a href="#【译文】那些士兵身处在一个偏远的岛上，与世隔绝又无事可做，因此闲的无聊，情绪低落" class="headerlink" title="【译文】那些士兵身处在一个偏远的岛上，与世隔绝又无事可做，因此闲的无聊，情绪低落"></a>【译文】那些士兵身处在一个偏远的岛上，与世隔绝又无事可做，因此闲的无聊，情绪低落</h3><ul>
 <li><p>Having been isolated 分词结构的被动表达，意为 “被隔离”</p>
@@ -228,7 +352,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js%E5%9F%BA%E7%A1%80/" rel="tag">js基础</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js%E5%9F%BA%E7%A1%80/" rel="tag">js基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
     </div>
   </div>
 
@@ -238,7 +362,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/js%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">js基础</a>
+      <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/js%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">js基础</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
     </div>
   </div>
 
@@ -247,7 +371,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
     </div>
   </div>
 
@@ -260,15 +384,23 @@
       <ul>
         
           <li>
+            <a href="/2020/08/20/vue-v-if-v-show/">v-if、v-else-if、v-else、v-show</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/21/%E9%97%AD%E5%8C%85/">闭包 (closure)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/21/Daily-English-2020-05-21/">Daily English 2020-05-21</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/20/Daily-English-2020-05-20/">Daily English 2020-05-20</a>
           </li>
         
           <li>
             <a href="/2020/05/20/js%E4%B8%ADcall%E3%80%81bind%E3%80%81apply%E6%96%B9%E6%B3%95%E7%9A%84%E5%BC%82%E5%90%8C/">js中call、bind、apply方法的异同</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/19/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -296,6 +428,8 @@
     <a href="/" class="mobile-nav-link">Angular</a>
   
     <a href="/" class="mobile-nav-link">js</a>
+  
+    <a href="/" class="mobile-nav-link">vue</a>
   
     <a href="/" class="mobile-nav-link">其他</a>
   
